@@ -1,0 +1,14 @@
+# almavivasolutions-js:
+#   filter: rjsmin
+#   output: ckanext-almavivasolutions/%(version)s-almavivasolutions.js
+#   contents:
+#     - js/almavivasolutions.js
+#   extra:
+#     preload:
+#       - base/main
+
+# almavivasolutions-css:
+#   filter: cssrewrite
+#   output: ckanext-almavivasolutions/%(version)s-almavivasolutions.css
+#   contents:
+#     - css/almavivasolutions.css

@@ -1,0 +1,6 @@
+include README.rst
+include LICENSE
+include requirements.txt
+recursive-include ckanext/almavivasolutions *.html *.json *.js *.less *.css *.mo *.yml
+recursive-include ckanext/almavivasolutions/migration *.ini *.py *.mako
+recursive-include ckanext/almavivasolutions/public *.*

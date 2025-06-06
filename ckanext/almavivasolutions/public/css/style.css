@@ -1,0 +1,15 @@
+@import url('componentes/header.css');
+
+:root {
+    --cor-fundo: #f0f0f0;
+    --cor-vermelho: #d83933;
+    --cor-azul: #1F449D;
+    --tamanho-titulo: 32px;
+    --tamanho-texto: 16px;
+    --cor-texto: #1b1b1b;
+    --cor-texto-secundaria: #ffffff;
+}
+
+* {
+    font-family: 'Segoe UI', sans-serif;
+}
