@@ -1,6 +1,6 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-
+from ckanext.almavivasolutions.controllers import bp
 
 # import ckanext.almavivasolutions.cli as cli
 # import ckanext.almavivasolutions.helpers as helpers
@@ -11,14 +11,18 @@ import ckan.plugins.toolkit as toolkit
 
 class AlmavivasolutionsPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
-    
+    # plugins.implements(plugins.IBeforeMap)
     
     # plugins.implements(plugins.IAuthFunctions)
     # plugins.implements(plugins.IActions)
-    # plugins.implements(plugins.IBlueprint)
+    plugins.implements(plugins.IBlueprint)
     # plugins.implements(plugins.IClick)
     # plugins.implements(plugins.ITemplateHelpers)
     # plugins.implements(plugins.IValidators)
+    
+    # def before_map(self, map):
+    #     map.connect('sobre', '/sobre', controller='ckanext.almavivasolutions.controllers:SobreController', action='sobre')
+    #     return map
     
 
     # IConfigurer
@@ -28,7 +32,6 @@ class AlmavivasolutionsPlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, "public")
         toolkit.add_resource("assets", "almavivasolutions")
 
-    
     # IAuthFunctions
 
     # def get_auth_functions(self):
@@ -41,8 +44,8 @@ class AlmavivasolutionsPlugin(plugins.SingletonPlugin):
 
     # IBlueprint
 
-    # def get_blueprint(self):
-    #     return views.get_blueprints()
+    def get_blueprint(self):
+        return bp
 
     # IClick
 

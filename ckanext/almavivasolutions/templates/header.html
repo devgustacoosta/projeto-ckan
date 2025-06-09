@@ -1,10 +1,3 @@
-{% ckan_extends %}
-
-{% block custom_styles %}
-{{super()}}
-<link rel="stylesheet" href="/css/style.css" />
-{% endblock %}
-
 {% set dataset_type = h.default_package_type() %}
 
 {% block header_wrapper %} {% block header_account %}
@@ -30,12 +23,12 @@
         </li>
         {% endblock %}
         {% block header_dashboard %}
-          <li>
-            <a href="{{ h.url_for('dashboard.datasets') }}" title="{{ _("View dashboard") }}">
-              <i class="fa fa-tachometer" aria-hidden="true"></i>
-              <span class="text">{{ _('Dashboard') }}</span>
-            </a>
-          </li>
+        <li>
+          <a href="{{ h.url_for('dashboard.datasets') }}" title="{{ _(" View dashboard") }}">
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <span class="text">{{ _('Dashboard') }}</span>
+          </a>
+        </li>
         {% endblock %}
         {% block header_account_settings_link %}
         <li>
@@ -78,58 +71,38 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <hgroup class="{{ g.header_class }} navbar-left">
 
-      {% block header_logo %}
-      {% if g.site_logo %}
-      <a class="logo" href="{{ h.url_for('home.index') }}">
-        <img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}"
-          title="{{ g.site_title }}" />
-      </a>
-      {% else %}
-      <h1>
-        <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
-      </h1>
-      {% if g.site_description %}
-      <h2>{{ g.site_description }}</h2>
-      {% endif %}
-      {% endif %}
-      {% endblock %}
-
-       </hgroup>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation-toggle"
-        aria-controls="main-navigation-toggle" aria-expanded="false" aria-label="{{ _('Toggle navigation') }}">
-        <span class="fa fa-bars text-white"></span>
-      </button>
-
-      <div class="main-navbar collapse navbar-collapse" id="main-navigation-toggle">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          {% block header_site_navigation %}
-            {% block header_site_navigation_tabs %}
-              {% set org_type = h.default_group_type('organization') %}
-              {% set group_type = h.default_group_type('group') %}
-
-              {{ h.build_nav_main(
-                (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Data'), ["dataset", "resource"]),
-                
-                (org_type ~ '.index',
-                  h.humanize_entity_type('organization', org_type, 'main nav') or _('Organizações'), ['organization']),
-                
-                  (group_type ~ '.index',
-                  h.humanize_entity_type('group', group_type, 'main nav') or _('Grupos'), ['group']),
-                
-                  ('home.about', _('Sobre nós')) 
-                ) }}
-            {% endblock %}
-          </ul>
-
-      {% endblock %}
-      {% block header_site_search %}
-          <form class="d-flex site-search" action="{% url_for dataset_type ~ '.search' %}" method="get">
-              <label class="d-none" for="field-sitewide-search">{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Pesquise aqui...') }}{% endblock %}</label>
-              <input id="field-sitewide-search" class="form-control me-2"  type="text" name="q" placeholder="{{ _('Pesquise aqui...') }}" aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
-              <button class="btn" type="submit" aria-label="{{ _('Submit') }}"><i class="fa fa-search"></i></button>
-          </form>
-      {% endblock %}
-      </div>
+        {% block header_logo %}
+        {% if g.site_logo %}
+        <a class="logo" href="{{ h.url_for('home.index') }}">
+          <img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}"
+            title="{{ g.site_title }}" />
+        </a>
+        {% else %}
+        <h1>
+          <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
+        </h1>
+        {% if g.site_description %}
+        <h2>{{ g.site_description }}</h2>
+        {% endif %}
+        {% endif %}
+        {% endblock %}
+      </hgroup>
+      <nav class="nav-menu">
+        <ul>
+          <li>
+            <a href="{{ h.url_for('home.index') }}">Data</a>
+          </li>
+          <li>
+            <a href="/about-us">Metrics</a>
+          </li>
+          <li>
+            <a href="#">Open Government</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </nav>
   </div>
 </header>

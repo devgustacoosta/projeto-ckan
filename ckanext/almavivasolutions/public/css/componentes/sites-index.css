@@ -1,0 +1,41 @@
+.sitesIndex {
+    margin: 0 auto;
+    padding: 32px 0;
+    border-top: 1px solid var(--cor-cinza);
+}
+
+.containerSites {
+    max-width: 75rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+
+.containerSites img {
+    height: 75px;
+    margin: 32px;
+    text-align: start;
+}
+
+.resources {
+    border-right: 2px solid var(--cor-cinza);
+}
+
+.linkSites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 0 0 0 40px;
+}
+
+.linkSites a {
+    color: var(--cor-azul);
+    text-decoration: underline;
+}
+
+.linkSites a svg{
+    height: 14px;
+    margin-left: 2px;
+}

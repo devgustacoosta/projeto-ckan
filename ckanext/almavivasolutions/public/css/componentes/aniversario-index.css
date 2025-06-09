@@ -1,0 +1,54 @@
+.aniversarioIndex {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+.containerAniversario {
+    max-width: 75rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.containerAniversario img {
+    max-width: 100%;
+    padding: 0 12px;
+}
+
+.textosAniversario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 12px;
+}
+
+.textosAniversario h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0.67em 0;
+    line-height: 1.2;
+}
+
+.textosAniversario p {
+    margin: 0;
+}
+
+.textosAniversario p a {
+    color: var(--cor-azul);
+    text-decoration: underline;
+}
+
+.textosAniversario .botaoTextos {
+    background-color: var(--cor-vermelho);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+    margin-top: 24px;
+}

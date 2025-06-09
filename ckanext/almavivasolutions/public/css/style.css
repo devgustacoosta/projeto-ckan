@@ -1,4 +1,13 @@
 @import url('componentes/header.css');
+@import url('componentes/banner-index.css');
+@import url('componentes/home-index.css');
+@import url('componentes/catalogo-index.css');
+@import url('componentes/missao-index.css');
+@import url('componentes/aniversario-index.css');
+@import url('componentes/sites-index.css');
+@import url('componentes/footer.css');
+@import url('componentes/identificacao.css');
+
 
 :root {
     --cor-fundo: #f0f0f0;
@@ -8,8 +17,11 @@
     --tamanho-texto: 16px;
     --cor-texto: #1b1b1b;
     --cor-texto-secundaria: #ffffff;
+    --cor-cinza: #dfe1e2;
+    --cor-cinza-escuro: #565c65;
 }
 
 * {
     font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
 }

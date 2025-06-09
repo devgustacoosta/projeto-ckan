@@ -1,0 +1,19 @@
+.bannerIndex {
+    background-image: url('/imagens/data-eua/15-years-anniversary-banner-2912px.jpg');
+    background-size: cover;
+    padding: 1rem;
+    height: 56px;
+}
+
+.bannerIndex p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bannerIndex p span {
+    font-weight: bolder;
+}

@@ -1,0 +1,73 @@
+.identificacao {
+    background-color: black;
+    color: white;
+}
+
+.identificacao svg {
+    width: 14px;
+}
+
+
+.identificacao a {
+    color: var(--cor-cinza);
+    font-weight: 700;
+}
+
+.identificacaoContainerDominio {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.identificacaoContainerDominio img {
+    width: 48px;
+    height: 49px;
+    margin-right: 32px;
+}
+
+.identificacaoContainer-textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.identificacaoContainer-textos .dominio,
+.identificacaoContainer-textos .descricao {
+    padding: 0;
+    margin: 0;
+}
+
+.identificacaoContainerLinks {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--cor-texto-secundaria);
+}
+
+.identificacaoContainer-links{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+}
+.identificacaoContainer-links a {
+    font-size: 15px;
+    text-decoration: underline;
+    font-weight: 400;
+    color: var(--cor-texto-secundaria);
+}
+
+.identificacaoContainerGov {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.identificacaoContainerGov p a{
+    text-decoration: underline;
+}
