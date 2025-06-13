@@ -15,6 +15,7 @@
 
 .cardContainerCatalogo {
     padding: 0 12px;
+    width: 100%;
 }
 
 .containerCatalogo .card {
@@ -22,10 +23,11 @@
     border: 1px solid #dfe1e2;
     background-color: #FCFCFB;
     margin: 1rem 0;
+    flex: 1;
+    width: 100%;
 }
 
 .containerCatalogo .card .card-body {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,14 +51,24 @@
 
 @media (max-width: 1024px) {
     .containerCatalogo {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 560px) {
+    .containerCatalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .containerCatalogo .card {
+        margin: 0.5rem 0;
+    }
+}
+
+
+@media (max-width: 180px) {
     .cardContainerCatalogo {
-        flex: 1 1 100%;
-        padding: 0 8px;
+        padding: 0;
     }
 }

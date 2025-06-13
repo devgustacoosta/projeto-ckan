@@ -7,15 +7,21 @@
     padding-top: 32px;
 }
 
+.site-footer .container {
+    width: 100%;
+    max-width: 75rem;
+}
+
 .logoFooter img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .linkFooter {
     display: grid;
     grid-template-columns: 1fr auto;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     justify-content: center;
     align-items: center;
 }
@@ -29,7 +35,7 @@
 .linkFooter .sitesLinkFooter ul li {
     list-style-type: none;
     padding: 0 16px;
-    border-left: 1px solid  #0061c9;
+    border-left: 1px solid #0061c9;
 }
 
 .linkFooter .sitesLinkFooter ul li:nth-child(1) {
@@ -41,24 +47,80 @@
 .linkFooter .sitesLinkFooter ul li a {
     color: var(--cor-azul);
     text-decoration: underline;
+    text-wrap: nowrap;
 }
 
 .linkFooter .midiasLinkFooter {
     display: flex;
 }
 
-.linkFooter .midiasLinkFooter ul li {
+.linkFooter .midiasLinkFooter ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.linkFooter .midiasLinkFooter ul li {
+    padding: 0 16px;
+}
+
 
 .linkFooter .midiasLinkFooter ul li a {
     color: var(--cor-azul);
     text-decoration: underline;
+    text-wrap: nowrap;
 }
 
-.linkFooter .midiasLinkFooter ul li svg{
+.linkFooter .midiasLinkFooter ul li:nth-child(2) {
+    border-left: 1px solid #0061c9;
+}
+
+.linkFooter .midiasLinkFooter ul li svg {
     width: 2em;
     height: 2em;
     margin-right: 0.5em;
-    color:  #0061c9;
+    color: #0061c9;
+}
+
+@media (max-width: 795px) {
+    .linkFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .linkFooter .sitesLinkFooter {
+        width: 100%;
+    }
+
+    .linkFooter .sitesLinkFooter ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .linkFooter .sitesLinkFooter ul li a {
+        word-break: break-all;
+        text-wrap: wrap !important;
+    }
+
+    .linkFooter .sitesLinkFooter ul li {
+        padding: 0;
+        border: none;
+        margin-bottom: 5px;
+        width: 100%;
+        text-wrap: wrap;
+    }
+
+    .linkFooter .midiasLinkFooter ul li a {
+        word-break: break-all;
+        width: 100%;
+    }
+
+    .linkFooter .midiasLinkFooter ul:nth-child(1) {
+        padding-left: 0;
+    }
+
+    .logoFooter img {
+        margin-bottom: 20px;
+    }
 }

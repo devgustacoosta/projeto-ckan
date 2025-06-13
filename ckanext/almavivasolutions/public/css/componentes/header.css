@@ -1,15 +1,29 @@
+body {
+    padding-top: 80px;
+}
+
 .masthead {
-    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    background-color: var(--cor-fundo);
     background-image: none;
+    padding: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-.masthead .container .logo img{
-    height: 50px;
-    width: 200px;
+.masthead .container .logo img {
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    max-width: 200px;
 }
 
-.masthead .container .navbar{
+.masthead .container .navbar {
     display: flex;
+    padding: 0;
 }
 
 .nav-menu {
@@ -27,7 +41,7 @@
     padding: 16px;
 }
 
-.nav-menu ul li a{
+.nav-menu ul li a {
     color: var(--cor-cinza-escuro);
     font-weight: 700;
     line-height: 1;
@@ -35,8 +49,132 @@
     font-size: 15px;
 }
 
-.nav-menu ul li a:hover{
+.nav-menu ul li a:hover {
     text-decoration: none;
     border-bottom: 3px solid var(--cor-vermelho);
     padding-bottom: 16px;
+}
+
+.guiaUsuario {
+    border-left: 2px solid var(--cor-cinza);
+    border-right: 2px solid var(--cor-cinza);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+    margin: 0 0 0 auto;
+    height: 100%;
+}
+
+.guiaUsuario svg {
+    width: 40px;
+    height: 40px;
+    color: var(--cor-vermelho);
+}
+
+.guiaUsuario a {
+    font-size: 16px;
+    color: var(--cor-texto);
+    text-decoration: underline;
+}
+
+.navMenu {
+    display: none;
+    height: 100%;
+    background-color: var(--cor-vermelho);
+    padding: 0 12px;
+    color: var(--cor-texto-secundaria);
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0 2px auto;
+}
+
+.navMenu p {
+    margin: 0;
+    padding: 35% 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.sidebarNavMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--cor-fundo);
+    padding: 16px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    padding-top: 65px;
+}
+
+.sidebarNavMenu.open {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebarNavMenu nav{
+    width: 100%;
+}
+
+
+.sidebarNavMenu nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebarNavMenu nav ul li {
+    border-top: 1px solid var(--cor-cinza-escuro);
+    padding: 8px 16px;
+}
+
+.sidebarNavMenu nav ul li a {
+    text-transform: uppercase;
+    color: var(--cor-cinza-escuro);
+}
+
+.closeSidebar {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--cor-cinza-escuro);
+}
+
+@media (max-width: 1028px) {
+    body {
+        padding-top: 55px;
+    }
+
+    .navMenu {
+        display: flex;
+    }
+
+    .masthead .container {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .guiaUsuario,
+    .nav-menu {
+        display: none;
+    }
 }

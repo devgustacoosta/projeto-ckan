@@ -1,0 +1,833 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _("Open Government ") }}{% endblock %}
+
+
+{% block content %}
+{% block banner %}
+{% snippet 'home/snippets/banner-index.html' %}
+{% endblock %}
+<main id="main-content">
+<section class="usa-section metrics org-select">
+  <div class="grid-container">
+    <h2 class="usa-heading">Metrics by Organization:</h2>
+    <div class="grid-row grid-gap-lg">
+      <div class="grid-col-12">
+        <label class="usa-label" for="metrics-reports__select">Select an organization:</label>
+        <div class="usa-combo-box" data-placeholder="Organizations...">
+          <select class="usa-select" name="metrics-reports" id="metrics-reports__select"
+            data-placeholder="Organizations...">
+            
+            <option value="/metrics/organization/allegheny-county-city-of-pittsburgh-western-pa-regional-data-center/index.html"
+              data-display-name="Allegheny County / City of Pittsburgh / Western PA Regional Data Center">Allegheny County / City of Pittsburgh / Western PA Regional Data Center</option>
+            
+            <option value="/metrics/organization/americorps-gov/index.html"
+              data-display-name="AmeriCorps">AmeriCorps</option>
+            
+            <option value="/metrics/organization/arkansas-gov/index.html"
+              data-display-name="State of Arkansas">State of Arkansas</option>
+            
+            <option value="/metrics/organization/arlington-county/index.html"
+              data-display-name="Arlington County, VA">Arlington County, VA</option>
+            
+            <option value="/metrics/organization/board-of-governors-of-the-federal-reserve-system/index.html"
+              data-display-name="Board of Governors of the Federal Reserve System">Board of Governors of the Federal Reserve System</option>
+            
+            <option value="/metrics/organization/ca-gov/index.html"
+              data-display-name="State of California">State of California</option>
+            
+            <option value="/metrics/organization/census-gov/index.html"
+              data-display-name="U.S. Census Bureau, Department of Commerce">U.S. Census Bureau, Department of Commerce</option>
+            
+            <option value="/metrics/organization/cfpb-gov/index.html"
+              data-display-name="Consumer Financial Protection Bureau">Consumer Financial Protection Bureau</option>
+            
+            <option value="/metrics/organization/city-of-austin/index.html"
+              data-display-name="City of Austin">City of Austin</option>
+            
+            <option value="/metrics/organization/city-of-baltimore/index.html"
+              data-display-name="City of Baltimore">City of Baltimore</option>
+            
+            <option value="/metrics/organization/city-of-baton-rouge/index.html"
+              data-display-name="City of Baton Rouge">City of Baton Rouge</option>
+            
+            <option value="/metrics/organization/city-of-bloomington/index.html"
+              data-display-name="City of Bloomington">City of Bloomington</option>
+            
+            <option value="/metrics/organization/city-of-chesapeake/index.html"
+              data-display-name="City of Chesapeake">City of Chesapeake</option>
+            
+            <option value="/metrics/organization/city-of-chicago/index.html"
+              data-display-name="City of Chicago">City of Chicago</option>
+            
+            <option value="/metrics/organization/city-of-ferndale-michigan/index.html"
+              data-display-name="City of Ferndale, Michigan">City of Ferndale, Michigan</option>
+            
+            <option value="/metrics/organization/city-of-hartford/index.html"
+              data-display-name="City of Hartford">City of Hartford</option>
+            
+            <option value="/metrics/organization/city-of-honolulu/index.html"
+              data-display-name="City of Honolulu">City of Honolulu</option>
+            
+            <option value="/metrics/organization/city-of-los-angeles/index.html"
+              data-display-name="City of Los Angeles">City of Los Angeles</option>
+            
+            <option value="/metrics/organization/city-of-new-orleans/index.html"
+              data-display-name="City of New Orleans">City of New Orleans</option>
+            
+            <option value="/metrics/organization/city-of-new-york/index.html"
+              data-display-name="City of New York">City of New York</option>
+            
+            <option value="/metrics/organization/city-of-philadelphia/index.html"
+              data-display-name="City of Philadelphia">City of Philadelphia</option>
+            
+            <option value="/metrics/organization/city-of-providence/index.html"
+              data-display-name="City of Providence">City of Providence</option>
+            
+            <option value="/metrics/organization/city-of-san-francisco/index.html"
+              data-display-name="City of San Francisco">City of San Francisco</option>
+            
+            <option value="/metrics/organization/city-of-seattle/index.html"
+              data-display-name="City of Seattle">City of Seattle</option>
+            
+            <option value="/metrics/organization/city-of-sioux-falls/index.html"
+              data-display-name="City of Sioux Falls">City of Sioux Falls</option>
+            
+            <option value="/metrics/organization/city-of-somerville/index.html"
+              data-display-name="City of Somerville">City of Somerville</option>
+            
+            <option value="/metrics/organization/city-of-tempe/index.html"
+              data-display-name="City of Tempe">City of Tempe</option>
+            
+            <option value="/metrics/organization/commodity-futures-trading-commission/index.html"
+              data-display-name="Commodity Futures Trading Commission">Commodity Futures Trading Commission</option>
+            
+            <option value="/metrics/organization/cook-county-of-illinois/index.html"
+              data-display-name="Cook County of Illinois">Cook County of Illinois</option>
+            
+            <option value="/metrics/organization/cpsc-gov/index.html"
+              data-display-name="US Consumer Product Safety Commission">US Consumer Product Safety Commission</option>
+            
+            <option value="/metrics/organization/dhs-gov/index.html"
+              data-display-name="Department of Homeland Security">Department of Homeland Security</option>
+            
+            <option value="/metrics/organization/district-of-columbia/index.html"
+              data-display-name="District of Columbia">District of Columbia</option>
+            
+            <option value="/metrics/organization/doc-gov/index.html"
+              data-display-name="Department of Commerce">Department of Commerce</option>
+            
+            <option value="/metrics/organization/dod-gov/index.html"
+              data-display-name="Department of Defense">Department of Defense</option>
+            
+            <option value="/metrics/organization/doe-gov/index.html"
+              data-display-name="Department of Energy">Department of Energy</option>
+            
+            <option value="/metrics/organization/doi-gov/index.html"
+              data-display-name="Department of the Interior">Department of the Interior</option>
+            
+            <option value="/metrics/organization/doj-gov/index.html"
+              data-display-name="Department of Justice">Department of Justice</option>
+            
+            <option value="/metrics/organization/dol-gov/index.html"
+              data-display-name="Department of Labor">Department of Labor</option>
+            
+            <option value="/metrics/organization/dot-gov/index.html"
+              data-display-name="Department of Transportation">Department of Transportation</option>
+            
+            <option value="/metrics/organization/eac-gov/index.html"
+              data-display-name="Election Assistance Commission">Election Assistance Commission</option>
+            
+            <option value="/metrics/organization/ed-gov/index.html"
+              data-display-name="Department of Education">Department of Education</option>
+            
+            <option value="/metrics/organization/edac-unm-edu/index.html"
+              data-display-name="Earth Data Analysis Center, University of New Mexico">Earth Data Analysis Center, University of New Mexico</option>
+            
+            <option value="/metrics/organization/eeoc-gov/index.html"
+              data-display-name="US Equal Employment Opportunity Commission">US Equal Employment Opportunity Commission</option>
+            
+            <option value="/metrics/organization/epa-gov/index.html"
+              data-display-name="U.S. Environmental Protection Agency">U.S. Environmental Protection Agency</option>
+            
+            <option value="/metrics/organization/exim-gov/index.html"
+              data-display-name="Export-Import Bank of the US">Export-Import Bank of the US</option>
+            
+            <option value="/metrics/organization/fairfax-county-virginia/index.html"
+              data-display-name="Fairfax County, Virginia">Fairfax County, Virginia</option>
+            
+            <option value="/metrics/organization/fcc-gov/index.html"
+              data-display-name="Federal Communications Commission">Federal Communications Commission</option>
+            
+            <option value="/metrics/organization/fdic-gov/index.html"
+              data-display-name="Federal Deposit Insurance Corporation">Federal Deposit Insurance Corporation</option>
+            
+            <option value="/metrics/organization/fec-gov/index.html"
+              data-display-name="Federal Election Commission">Federal Election Commission</option>
+            
+            <option value="/metrics/organization/federal-laboratory-consortium/index.html"
+              data-display-name="Federal Laboratory Consortium">Federal Laboratory Consortium</option>
+            
+            <option value="/metrics/organization/federal-retirement-thrift-investment-board/index.html"
+              data-display-name="Federal Retirement Thrift Investment Board">Federal Retirement Thrift Investment Board</option>
+            
+            <option value="/metrics/organization/federal-trade-commission/index.html"
+              data-display-name="Federal Trade Commission">Federal Trade Commission</option>
+            
+            <option value="/metrics/organization/fema-gov/index.html"
+              data-display-name="Federal Emergency Management Agency, Department of Homeland Security">Federal Emergency Management Agency, Department of Homeland Security</option>
+            
+            <option value="/metrics/organization/fgdc-gov/index.html"
+              data-display-name="Federal Geographic Data Committee">Federal Geographic Data Committee</option>
+            
+            <option value="/metrics/organization/fhfa-gov/index.html"
+              data-display-name="Federal Housing Finance Agency">Federal Housing Finance Agency</option>
+            
+            <option value="/metrics/organization/florida-department-of-environmental-protection/index.html"
+              data-display-name="Florida Department of Environmental Protection">Florida Department of Environmental Protection</option>
+            
+            <option value="/metrics/organization/gsa-gov/index.html"
+              data-display-name="General Services Administration">General Services Administration</option>
+            
+            <option value="/metrics/organization/hhs-gov/index.html"
+              data-display-name="U.S. Department of Health & Human Services">U.S. Department of Health & Human Services</option>
+            
+            <option value="/metrics/organization/hud-gov/index.html"
+              data-display-name="Department of Housing and Urban Development">Department of Housing and Urban Development</option>
+            
+            <option value="/metrics/organization/ibwc-gov/index.html"
+              data-display-name="International Boundary & Water Commission">International Boundary & Water Commission</option>
+            
+            <option value="/metrics/organization/imls-gov/index.html"
+              data-display-name="Institute of Museum and Library Services">Institute of Museum and Library Services</option>
+            
+            <option value="/metrics/organization/king-county-washington/index.html"
+              data-display-name="King County, Washington">King County, Washington</option>
+            
+            <option value="/metrics/organization/lake-county-illinois/index.html"
+              data-display-name="Lake County, Illinois">Lake County, Illinois</option>
+            
+            <option value="/metrics/organization/library-of-congress/index.html"
+              data-display-name="Library of Congress">Library of Congress</option>
+            
+            <option value="/metrics/organization/loudoun-county-virginia/index.html"
+              data-display-name="Loudoun County, Virginia">Loudoun County, Virginia</option>
+            
+            <option value="/metrics/organization/louisville-metro-government/index.html"
+              data-display-name="Louisville Metro Government">Louisville Metro Government</option>
+            
+            <option value="/metrics/organization/mcc-gov/index.html"
+              data-display-name="Millennium Challenge Corporation">Millennium Challenge Corporation</option>
+            
+            <option value="/metrics/organization/montgomery-county-of-maryland/index.html"
+              data-display-name="Montgomery County of Maryland">Montgomery County of Maryland</option>
+            
+            <option value="/metrics/organization/mspb-gov/index.html"
+              data-display-name="Merit Systems Protection Board">Merit Systems Protection Board</option>
+            
+            <option value="/metrics/organization/nara-gov/index.html"
+              data-display-name="National Archives and Records Administration">National Archives and Records Administration</option>
+            
+            <option value="/metrics/organization/nasa-gov/index.html"
+              data-display-name="National Aeronautics and Space Administration">National Aeronautics and Space Administration</option>
+            
+            <option value="/metrics/organization/national-credit-union-administration/index.html"
+              data-display-name="National Credit Union Administration NCUA">National Credit Union Administration NCUA</option>
+            
+            <option value="/metrics/organization/national-institute-of-standards-and-technology/index.html"
+              data-display-name="National Institute of Standards and Technology">National Institute of Standards and Technology</option>
+            
+            <option value="/metrics/organization/national-telecommunications-and-information-administration/index.html"
+              data-display-name="National Telecommunications and Information Administration">National Telecommunications and Information Administration</option>
+            
+            <option value="/metrics/organization/neh-gov/index.html"
+              data-display-name="National Endowment for the Humanities">National Endowment for the Humanities</option>
+            
+            <option value="/metrics/organization/nitrd-gov/index.html"
+              data-display-name="Networking and Information Technology Research and Development, Executive Office of the President">Networking and Information Technology Research and Development, Executive Office of the President</option>
+            
+            <option value="/metrics/organization/noaa-gov/index.html"
+              data-display-name="National Oceanic and Atmospheric Administration, Department of Commerce">National Oceanic and Atmospheric Administration, Department of Commerce</option>
+            
+            <option value="/metrics/organization/nrc-gov/index.html"
+              data-display-name="Nuclear Regulatory Commission">Nuclear Regulatory Commission</option>
+            
+            <option value="/metrics/organization/nsf-gov/index.html"
+              data-display-name="National Science Foundation">National Science Foundation</option>
+            
+            <option value="/metrics/organization/ntsb-gov/index.html"
+              data-display-name="National Transportation Safety Board">National Transportation Safety Board</option>
+            
+            <option value="/metrics/organization/office-of-management-and-budget/index.html"
+              data-display-name="Office of Management and Budget">Office of Management and Budget</option>
+            
+            <option value="/metrics/organization/opentopography/index.html"
+              data-display-name="OpenTopography">OpenTopography</option>
+            
+            <option value="/metrics/organization/opm-gov/index.html"
+              data-display-name="Office of Personnel Management">Office of Personnel Management</option>
+            
+            <option value="/metrics/organization/pbgc-gov/index.html"
+              data-display-name="Pension Benefit Guaranty Corporation">Pension Benefit Guaranty Corporation</option>
+            
+            <option value="/metrics/organization/pennsylvania-geospatial-data-clearinghouse/index.html"
+              data-display-name="Pennsylvania Geospatial Data Clearinghouse">Pennsylvania Geospatial Data Clearinghouse</option>
+            
+            <option value="/metrics/organization/rrb-gov/index.html"
+              data-display-name="Railroad Retirement Board">Railroad Retirement Board</option>
+            
+            <option value="/metrics/organization/sba-gov/index.html"
+              data-display-name="Small Business Administration">Small Business Administration</option>
+            
+            <option value="/metrics/organization/sec-gov/index.html"
+              data-display-name="Securities and Exchange Commission">Securities and Exchange Commission</option>
+            
+            <option value="/metrics/organization/ssa-gov/index.html"
+              data-display-name="Social Security Administration">Social Security Administration</option>
+            
+            <option value="/metrics/organization/state-gov/index.html"
+              data-display-name="Department of State">Department of State</option>
+            
+            <option value="/metrics/organization/state-of-alaska/index.html"
+              data-display-name="State of Alaska">State of Alaska</option>
+            
+            <option value="/metrics/organization/state-of-connecticut/index.html"
+              data-display-name="State of Connecticut">State of Connecticut</option>
+            
+            <option value="/metrics/organization/state-of-hawaii/index.html"
+              data-display-name="State of Hawaii">State of Hawaii</option>
+            
+            <option value="/metrics/organization/state-of-iowa/index.html"
+              data-display-name="State of Iowa">State of Iowa</option>
+            
+            <option value="/metrics/organization/state-of-maryland/index.html"
+              data-display-name="State of Maryland">State of Maryland</option>
+            
+            <option value="/metrics/organization/state-of-missouri/index.html"
+              data-display-name="State of Missouri">State of Missouri</option>
+            
+            <option value="/metrics/organization/state-of-new-york/index.html"
+              data-display-name="State of New York">State of New York</option>
+            
+            <option value="/metrics/organization/state-of-oklahoma/index.html"
+              data-display-name="State of Oklahoma">State of Oklahoma</option>
+            
+            <option value="/metrics/organization/state-of-oregon/index.html"
+              data-display-name="State of Oregon">State of Oregon</option>
+            
+            <option value="/metrics/organization/state-of-washington/index.html"
+              data-display-name="State of Washington">State of Washington</option>
+            
+            <option value="/metrics/organization/town-of-cary-north-carolina/index.html"
+              data-display-name="Town of Cary, North Carolina">Town of Cary, North Carolina</option>
+            
+            <option value="/metrics/organization/town-of-chapel-hill-north-carolina/index.html"
+              data-display-name="Town of Chapel Hill, North Carolina">Town of Chapel Hill, North Carolina</option>
+            
+            <option value="/metrics/organization/treasury-gov/index.html"
+              data-display-name="Department of the Treasury">Department of the Treasury</option>
+            
+            <option value="/metrics/organization/u-s-department-of-labor-bureau-of-labor-statistics/index.html"
+              data-display-name="U.S. Department of Labor Bureau of Labor Statistics">U.S. Department of Labor Bureau of Labor Statistics</option>
+            
+            <option value="/metrics/organization/uidaho-edu/index.html"
+              data-display-name="University of Idaho">University of Idaho</option>
+            
+            <option value="/metrics/organization/usace-army-mil/index.html"
+              data-display-name="Army Corps of Engineers, Department of the Army, Department of Defense">Army Corps of Engineers, Department of the Army, Department of Defense</option>
+            
+            <option value="/metrics/organization/usaid-gov/index.html"
+              data-display-name="US Agency for International Development">US Agency for International Development</option>
+            
+            <option value="/metrics/organization/usda-gov/index.html"
+              data-display-name="Department of Agriculture">Department of Agriculture</option>
+            
+            <option value="/metrics/organization/usitc-gov/index.html"
+              data-display-name="US International Trade Commission">US International Trade Commission</option>
+            
+            <option value="/metrics/organization/va-gov/index.html"
+              data-display-name="Department of Veterans Affairs">Department of Veterans Affairs</option>
+            
+            <option value="/metrics/organization/vcgi-org/index.html"
+              data-display-name="Vermont Center for Geographic Information">Vermont Center for Geographic Information</option>
+            
+            <option value="/metrics/organization/wvu-edu/index.html"
+              data-display-name="WV GIS Technical Center">WV GIS Technical Center</option>
+            
+          </select>
+        </div>
+        <div class="mt-2">
+          <a href="" id="metrics-reports__link">
+            <button class="usa-button" type="button">
+              View Report
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="usa-section metrics">
+  <div class="grid-container">
+    <h2 class="usa-heading">Data.gov Sitewide Metrics:</h2>
+    <h6 class="usa-heading">Report Date: 2025-05-31 </h6>
+    <p class="text-italic">All data shown represents the calendar month which ends at the Report Date.
+      Data updates at the beginning of each new month to show the calendar month past.</p>
+    <div class="mt-3"></div>
+    
+    
+    
+    <div class="grid-row grid-gap-lg PAGEVIEWS">
+      <div class="grid-col-12">
+        <h4>Total Pageviews</h4>
+        <h3>1,148,702</h3>
+      </div>
+    </div>
+    <div class="mt-3"></div>
+    
+    
+    
+    
+    <div class="grid-row grid-gap-lg DEVICE_TYPE">
+      <div class="grid-col-12">
+        <h4>Users by Device Type</h4>
+        <p></p><table class="usa-table usa-table--borderless usa-table--stacked full-width"><caption>
+            <a href="https://s3-us-gov-west-1.amazonaws.com/cg-baa85e06-1bdd-4672-9e3a-36333c05c6ce/global__device_category__last30.2025-05-31.csv"><svg class="usa-icon " aria-hidden="true" role="img">
+    <use xlink:href="#svg-file_download"></use>
+  </svg> Download Full Report -
+              Users by Device Type</a>
+          </caption>
+          <thead>
+            <tr>
+              
+              
+              <th scope="col">
+                
+                Device Category
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Users
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Percentage
+                
+              </th>
+              
+              
+            </tr>
+          </thead>
+          
+          <tr>
+            <td>desktop</td><td>332,483</td><td>86.63%</td>
+          </tr>
+          
+          <tr>
+            <td>mobile</td><td>49,241</td><td>12.83%</td>
+          </tr>
+          
+          <tr>
+            <td>tablet</td><td>2,063</td><td>0.54%</td>
+          </tr>
+          
+          <tr>
+            <td>smart tv</td><td>30</td><td>0.01%</td>
+          </tr>
+          
+        </table>
+        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-row grid-gap-lg MOST_DOWNLOADED_DATASETS">
+      <div class="grid-col-12">
+        <h4>Most Downloaded Dataset Files</h4>
+        <p>Top 10 downloaded files</p><table class="usa-table usa-table--borderless usa-table--stacked"><caption>
+            <a href="https://s3-us-gov-west-1.amazonaws.com/cg-baa85e06-1bdd-4672-9e3a-36333c05c6ce/global__download_requests__last30.2025-05-31.csv"><svg class="usa-icon " aria-hidden="true" role="img">
+    <use xlink:href="#svg-file_download"></use>
+  </svg> Download Full Report -
+              Most Downloaded Dataset Files</a>
+          </caption>
+          <thead>
+            <tr>
+              
+              
+              <th scope="col">
+                
+                File Url
+                
+              </th>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <th scope="col">
+                
+                Page Title
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Count
+                
+              </th>
+              
+              
+            </tr>
+          </thead>
+          
+          <tr>
+            <td><a href="https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD">https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/electric-vehicle-population-data" target="_blank">Electric Vehicle Population Data</a>
+                  </td><td>3,085</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD">https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/crime-data-from-2020-to-present" target="_blank">Crime Data from 2020 to Present</a>
+                  </td><td>2,112</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://pasteur.epa.gov/uploads/10.23719/1531143/SupplyChainGHGEmissionFactors_v1.3.0_NAICS_CO2e_USD">https://pasteur.epa.gov/uploads/10.23719/1531143/SupplyChainGHGEmissionFactors_v1.3.0_NAICS_CO2e_USD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/supply-chain-greenhouse-gas-emission-factors-v1-3-by-naics-6" target="_blank">Supply Chain Greenhouse Gas Emission Factors v1.3 by NAICS-6</a>
+                  </td><td>1,863</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.montgomerycountymd.gov/api/views/v76h-r7br/rows.csv?accessType=DOWNLOAD">https://data.montgomerycountymd.gov/api/views/v76h-r7br/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/warehouse-and-retail-sales" target="_blank">Warehouse and Retail Sales</a>
+                  </td><td>1,354</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://www.fdic.gov/bank/individual/failed/banklist.csv">https://www.fdic.gov/bank/individual/failed/banklist.csv</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/fdic-failed-bank-list" target="_blank">FDIC Failed Bank List</a>
+                  </td><td>1,265</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD">https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset?q=&sort=views_recent+desc" target="_blank">Dataset</a>
+                  </td><td>1,107</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD">https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes" target="_blank">Motor Vehicle Collisions - Crashes</a>
+                  </td><td>849</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.cityofnewyork.us/api/views/c3uy-2p5r/rows.csv?accessType=DOWNLOAD">https://data.cityofnewyork.us/api/views/c3uy-2p5r/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/air-quality" target="_blank">Air Quality</a>
+                  </td><td>748</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.cdc.gov/api/views/hksd-2xuw/rows.csv?accessType=DOWNLOAD">https://data.cdc.gov/api/views/hksd-2xuw/rows.csv?accessType=DOWNLOAD</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/u-s-chronic-disease-indicators" target="_blank">U.S. Chronic Disease Indicators</a>
+                  </td><td>735</td>
+          </tr>
+          
+        </table>
+        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-row grid-gap-lg MOST_CLICKED_OUTBOUND_LINKS">
+      <div class="grid-col-12">
+        <h4>Most Clicked Outbound Links</h4>
+        <p>Top 10 external link clicks</p><table class="usa-table usa-table--borderless usa-table--stacked"><caption>
+            <a href="https://s3-us-gov-west-1.amazonaws.com/cg-baa85e06-1bdd-4672-9e3a-36333c05c6ce/global__link_requests__last30.2025-05-31.csv"><svg class="usa-icon " aria-hidden="true" role="img">
+    <use xlink:href="#svg-file_download"></use>
+  </svg> Download Full Report -
+              Most Clicked Outbound Links</a>
+          </caption>
+          <thead>
+            <tr>
+              
+              
+              <th scope="col">
+                
+                Link Url
+                
+              </th>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <th scope="col">
+                
+                Page Title
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Count
+                
+              </th>
+              
+              
+            </tr>
+          </thead>
+          
+          <tr>
+            <td><a href="https://data-lakecountyil.opendata.arcgis.com/api/download/v1/items/3e0c1eb04e5c48b3be9040b0589d3ccf">https://data-lakecountyil.opendata.arcgis.com/api/download/v1/items/3e0c1eb04e5c48b3be9040b0589d3ccf</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/national-obesity-by-state-d765a" target="_blank">National Obesity By State</a>
+                  </td><td>1,837</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://dsbs.sba.gov/search/dsp_dsbs.cfm">https://dsbs.sba.gov/search/dsp_dsbs.cfm</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/dynamic-small-business-search-dsbs-4f0da" target="_blank">Dynamic Small Business Search (DSBS)</a>
+                  </td><td>1,684</td>
+          </tr>
+          
+          <tr>
+            <td><a href="http://www.ers.usda.gov/data-products/fruit-and-vegetable-prices.aspx">http://www.ers.usda.gov/data-products/fruit-and-vegetable-prices.aspx</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/fruit-and-vegetable-prices" target="_blank">Fruit and Vegetable Prices</a>
+                  </td><td>1,486</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://www.cdc.gov/nchs/ndi/index.html">https://www.cdc.gov/nchs/ndi/index.html</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/national-death-index" target="_blank">National Death Index</a>
+                  </td><td>882</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.wa.gov/d/f6w7-q2d2">https://data.wa.gov/d/f6w7-q2d2</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/electric-vehicle-population-data" target="_blank">Electric Vehicle Population Data</a>
+                  </td><td>487</td>
+          </tr>
+          
+          <tr>
+            <td><a href="http://www.ers.usda.gov/data-products/fruit-and-vegetable-prices.aspx">http://www.ers.usda.gov/data-products/fruit-and-vegetable-prices.aspx</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/fruit-and-vegetable-prices/resource/e3bb62e0-8c97-4ff0-9c7b-b3d7fb4b06fc" target="_blank">Fruit and Vegetable Prices - Web page with links to Excel files</a>
+                  </td><td>485</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://iris.fws.gov/APPS/ServCat/DownloadFile/173741?Reference=117348">https://iris.fws.gov/APPS/ServCat/DownloadFile/173741?Reference=117348</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/water-quality-data-41c5e" target="_blank">Water Quality Data</a>
+                  </td><td>485</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.cityofnewyork.us/d/h9gi-nx95">https://data.cityofnewyork.us/d/h9gi-nx95</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes" target="_blank">Motor Vehicle Collisions - Crashes</a>
+                  </td><td>442</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://data.lacity.org/d/2nrs-mtv8">https://data.lacity.org/d/2nrs-mtv8</a></td><td>
+                    <a href="https://catalog.data.gov/dataset/crime-data-from-2020-to-present" target="_blank">Crime Data from 2020 to Present</a>
+                  </td><td>439</td>
+          </tr>
+          
+        </table>
+        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-row grid-gap-lg DATASETS_PER_ORG">
+      <div class="grid-col-12">
+        <h4>Number of Datasets per Organization</h4>
+        <p>Count of datasets by organization</p><table class="usa-table usa-table--borderless usa-table--stacked full-width"><caption>
+            <a href="https://s3-us-gov-west-1.amazonaws.com/cg-baa85e06-1bdd-4672-9e3a-36333c05c6ce/global__datasets_per_org.2025-05-31.csv"><svg class="usa-icon " aria-hidden="true" role="img">
+    <use xlink:href="#svg-file_download"></use>
+  </svg> Download Full Report -
+              Number of Datasets per Organization</a>
+          </caption>
+          <thead>
+            <tr>
+              
+              
+              <th scope="col">
+                
+                Organization
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Count
+                
+              </th>
+              
+              
+            </tr>
+          </thead>
+          
+          <tr>
+            <td><a href="/metrics/organization/noaa-gov/index.html">National Oceanic and Atmospheric Administration, Department of Commerce</a></td><td>103,225</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/census-gov/index.html">U.S. Census Bureau, Department of Commerce</a></td><td>77,116</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/doi-gov/index.html">Department of the Interior</a></td><td>39,043</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/nasa-gov/index.html">National Aeronautics and Space Administration</a></td><td>25,927</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/epa-gov/index.html">U.S. Environmental Protection Agency</a></td><td>6,529</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/edac-unm-edu/index.html">Earth Data Analysis Center, University of New Mexico</a></td><td>5,459</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/ca-gov/index.html">State of California</a></td><td>3,801</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/doe-gov/index.html">Department of Energy</a></td><td>3,723</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/city-of-austin/index.html">City of Austin</a></td><td>3,023</td>
+          </tr>
+          
+        </table>
+        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="grid-row grid-gap-lg HARVEST_SOURCES_PER_ORG">
+      <div class="grid-col-12">
+        <h4>Number of Harvest Sources per Organization</h4>
+        <p>Count of harvest sources by organization</p><table class="usa-table usa-table--borderless usa-table--stacked full-width"><caption>
+            <a href="https://s3-us-gov-west-1.amazonaws.com/cg-baa85e06-1bdd-4672-9e3a-36333c05c6ce/global__harvest_sources.2025-05-31.csv"><svg class="usa-icon " aria-hidden="true" role="img">
+    <use xlink:href="#svg-file_download"></use>
+  </svg> Download Full Report -
+              Number of Harvest Sources per Organization</a>
+          </caption>
+          <thead>
+            <tr>
+              
+              
+              <th scope="col">
+                
+                Organization
+                
+              </th>
+              
+              
+              
+              <th scope="col">
+                
+                Count
+                
+              </th>
+              
+              
+            </tr>
+          </thead>
+          
+          <tr>
+            <td><a href="/metrics/organization/census-gov/index.html">U.S. Census Bureau, Department of Commerce</a></td><td>660</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/noaa-gov/index.html">National Oceanic and Atmospheric Administration, Department of Commerce</a></td><td>71</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/epa-gov/index.html">U.S. Environmental Protection Agency</a></td><td>43</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/fgdc-gov/index.html">Federal Geographic Data Committee</a></td><td>6</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/usace-army-mil/index.html">Army Corps of Engineers, Department of the Army, Department of Defense</a></td><td>4</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/doe-gov/index.html">Department of Energy</a></td><td>3</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/dot-gov/index.html">Department of Transportation</a></td><td>3</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/arkansas-gov/index.html">State of Arkansas</a></td><td>2</td>
+          </tr>
+          
+          <tr>
+            <td><a href="/metrics/organization/hhs-gov/index.html">U.S. Department of Health & Human Services</a></td><td>2</td>
+          </tr>
+          
+        </table>
+        <div class="usa-sr-only usa-table__announcement-region" aria-live="polite"></div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+<!-- fetch metrics data -->
+<script>
+  const comboBox = document.getElementById("metrics-reports__select");
+  const linkEl = document.getElementById("metrics-reports__link");
+
+  comboBox.addEventListener("change", (event) => {
+    linkEl.href = event.target.value;
+  });
+</script>
+</main>
+
+{%endblock%}

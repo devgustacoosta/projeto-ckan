@@ -17,7 +17,7 @@
     max-width: 75rem;
     width: 100%;
     margin: 0 auto;
-    padding: 16px 0;
+    padding: 16px 12px;
     display: grid;
     grid-template-columns: auto 1fr;
 }
@@ -43,17 +43,18 @@
     max-width: 75rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 16px 12px;
     color: var(--cor-texto-secundaria);
 }
 
-.identificacaoContainer-links{
+.identificacaoContainer-links {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
 
 }
+
 .identificacaoContainer-links a {
     font-size: 15px;
     text-decoration: underline;
@@ -65,9 +66,26 @@
     max-width: 75rem;
     width: 100%;
     margin: 0 auto;
-    padding: 32px 0;
+    padding: 16px 12px;
+
 }
 
-.identificacaoContainerGov p a{
+.identificacaoContainerGov p a {
     text-decoration: underline;
+}
+
+@media (max-width: 1020px) {
+    .identificacaoContainer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .identificacaoContainerDominio {
+        grid-template-columns: 1fr;
+    }
+
+    .identificacaoContainer-links {
+        grid-template-columns: 1fr;
+    }
 }

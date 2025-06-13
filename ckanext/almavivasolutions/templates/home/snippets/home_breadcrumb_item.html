@@ -1,0 +1,8 @@
+<li class="home"><a href="{{ h.url_for('home.index') }}" aria-label="{{ _('Home') }}"><i class="fa fa-home"></i><span> {{ _('Home') }}</span></a></li>
+
+<section class="Catalogo">
+    <div class="containerCatalogo">
+        <h1>Data Catalog</h1>
+    </div>
+    <li class="active">{{ h.nav_link(_(dataset_type.title() + 's'), named_route='%s.search' % dataset_type) }}</li>
+</section>

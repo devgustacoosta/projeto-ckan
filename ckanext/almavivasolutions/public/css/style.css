@@ -1,18 +1,35 @@
 @import url('componentes/header.css');
-@import url('componentes/banner-index.css');
-@import url('componentes/home-index.css');
-@import url('componentes/catalogo-index.css');
-@import url('componentes/missao-index.css');
-@import url('componentes/aniversario-index.css');
-@import url('componentes/sites-index.css');
-@import url('componentes/footer.css');
+@import url('componentes/banner.css');
 @import url('componentes/identificacao.css');
+@import url('componentes/footer.css');
+@import url('componentes/contact.css');
+@import url('componentes/open-government.css');
+@import url('componentes/user-guide.css');
+@import url('componentes/dataset.css');
+
+@import url('componentes/index/home-index.css');
+@import url('componentes/index/catalogo-index.css');
+@import url('componentes/index/missao-index.css');
+@import url('componentes/index/aniversario-index.css');
+@import url('componentes/index/sites-index.css');
+@import url('componentes/index/graficos-index.css');
+
+@import url('componentes/search/search.css');
+@import url('componentes/search/mapa.css');
+@import url('componentes/search/catalog.css');
+@import url('componentes/search/input-search.css');
+
+@import url('componentes/result.css');
+
+@import url('componentes/metrics.css');
+
 
 
 :root {
     --cor-fundo: #f0f0f0;
     --cor-vermelho: #d83933;
     --cor-azul: #1F449D;
+    --cor-rosa: #d63384;
     --tamanho-titulo: 32px;
     --tamanho-texto: 16px;
     --cor-texto: #1b1b1b;
@@ -25,3 +42,7 @@
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
 }
+
+/* h1, h2{
+    font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+} */

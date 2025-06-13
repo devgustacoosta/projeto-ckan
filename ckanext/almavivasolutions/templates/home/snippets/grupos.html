@@ -1,0 +1,21 @@
+<div class="box">
+  <header class="module-heading">
+    <h3>Grupos</h3>
+  </header>
+  <section class="module-content">
+    <ul class="unstyled">
+      {% for group in h.exibir_grupos() %}
+        <li>
+          <a href="{{ h.url_for('group_read', action='read', id=group.name) }}">
+            <h3>{{ group.display_name }}</h3>
+          </a>
+          {% if group.description %}
+            <p>{{ h.markdown_extract(group.description, extract_length=80) }}</p>
+          {% else %}
+            <p>{{ _('Esse departamento não possui descrição') }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

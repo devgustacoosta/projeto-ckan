@@ -47,6 +47,7 @@
     text-transform: uppercase;
     font-weight: 500;
     margin: 0 0 8px 0;
+    word-break: break-all;
 }
 
 .homeIndex-textos span {
@@ -61,7 +62,7 @@
 
 .homeIndex-pesquisa form {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 2fr 1fr;
     height: 2rem;
     width: 50%;
 }
@@ -74,9 +75,11 @@
     padding: 0 8px;
     border: 1px solid;
     border-right: none;
+    border-radius: 0;
 }
 
 .homeIndex-pesquisa form button {
+    width: min-content;
     margin: 0;
     font-weight: 700;
     font-size: 16px;
@@ -86,4 +89,15 @@
     background-color: var(--cor-vermelho);
     border: none;
     border-radius: 0 5px 5px 0;
+}
+
+@media (max-width:560px) {
+    .homeIndex-pesquisa form {
+        width: 100%;
+    }
+
+    .homeIndex-textos h1 {
+        word-break: break-all;
+    }
+
 }

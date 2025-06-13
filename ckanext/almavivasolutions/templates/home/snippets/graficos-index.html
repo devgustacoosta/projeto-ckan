@@ -1,0 +1,156 @@
+<section class="graficos">
+    <div class="containerGraficos">
+        <div id="chartContainerOrganization"></div>
+        <div class="grupoGraficos">
+            <div id="chartContainerAge"></div>
+            <div id="chartContainerDistribution"></div>
+        </div>
+        <div class="ultimaAtualizacao">
+            <p>Last Updated: <span class="campoData"></span></p>
+        </div>
+    </div>
+</section>
+
+<script>
+    let chartDistribution, chartAge, chartOrganization;
+
+    const dataAtual = new Date().toUTCString()
+    const campoData = document.querySelector(".campoData");
+
+    function renderCharts() {
+        if (chartDistribution) chartDistribution.destroy();
+        if (chartAge) chartAge.destroy();
+        if (chartOrganization) chartOrganization.destroy();
+
+        chartDistribution = new CanvasJS.Chart("chartContainerDistribution", {
+            animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Dataset Distribution",
+                fontSize: 14
+            },
+            legend: {
+                horizontalAlign: "center",
+                verticalAlign: "top"
+            },
+            data: [{
+                type: "doughnut",
+                showInLegend: true,
+                innerRadius: 40,
+                dataPoints: [
+                    { y: 270000, label: "Datasets", legendText: "Datasets", color: "rgba(13,110,253, 0.8)" },
+                    { y: 100000, label: "Datasets in Collections", legendText: "Datasets in Collections", color: "rgba(220,53,69,0.8)" }
+                ]
+            }]
+        });
+
+
+        var chartAge = new CanvasJS.Chart("chartContainerAge", {
+            animationEnabled: true,
+            theme: "light2",
+            legend: {
+                fontSize: 0
+            },
+            title: {
+                text: "Dataset Age"
+            },
+            data: [{
+                type: "column",
+                showInLegend: true,
+                legendMarkerColor: "grey",
+                dataPoints: [
+                    { y: 300878, label: "Older", color: "rgba(220,53,69,0.8)" },
+                    { y: 266455, label: "Last year", color: "rgba(13,110,253, 0.8" },
+                    { y: 169709, label: "Last month", color: "rgba(253,126,20, 0.8)" },
+                    { y: 158400, label: "Last week", color: "#ffc107" },
+                ]
+            }]
+        });
+
+        chartOrganization = new CanvasJS.Chart("chartContainerOrganization", {
+            animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Key Metrics by Organization Type",
+                fontSize: 14
+            },
+            legend: {
+                verticalAlign: "top",
+                horizontalAlign: "center",
+                fontSize: 12
+            },
+            axisY: {
+                logarithmic: true
+            },
+            axisX: {
+                labelAutoFit: true
+            },
+            data: [
+                {
+                    type: "column",
+                    name: "County Government",
+                    showInLegend: true,
+                    color: "rgba(220,53,69,0.8)",
+                    dataPointWidth: 12,
+                    dataPoints: [
+                        { y: 8, label: "Agencies" },
+                        { y: 5000, label: "Datasets" },
+                        { y: 7, label: "Harvest Sources" }
+                    ]
+                },
+                {
+                    type: "column",
+                    name: "Federal Government",
+                    showInLegend: true,
+                    color: "rgba(13,110,253, 0.8",
+                    dataPointWidth: 12,
+                    dataPoints: [
+                        { y: 60, label: "Agencies" },
+                        { y: 200000, label: "Datasets" },
+                        { y: 800, label: "Harvest Sources" }
+                    ]
+                },
+                {
+                    type: "column",
+                    name: "City Government",
+                    showInLegend: true,
+                    color: "rgba(253,126,20, 0.8)",
+                    dataPointWidth: 12,
+                    dataPoints: [
+                        { y: 30, label: "Agencies" },
+                        { y: 10500, label: "Datasets" },
+                        { y: 25, label: "Harvest Sources" }
+                    ]
+                },
+                {
+                    type: "column",
+                    name: "State Government",
+                    showInLegend: true,
+                    color: "rgba(255,193,7, 0.8)",
+                    dataPointWidth: 12,
+                    dataPoints: [
+                        { y: 20, label: "Agencies" },
+                        { y: 10200, label: "Datasets" },
+                        { y: 18, label: "Harvest Sources" }
+                    ]
+                }
+            ]
+        });
+
+        chartDistribution.render();
+        chartAge.render();
+        chartOrganization.render();
+
+        campoData.textContent = `${dataAtual}`;
+    }
+
+    window.onload = renderCharts;
+
+    let resizeTimeout;
+    window.onresize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(renderCharts, 200);
+    };
+</script>
+
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>

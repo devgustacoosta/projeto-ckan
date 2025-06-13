@@ -52,3 +52,23 @@
     width: max-content;
     margin-top: 24px;
 }
+
+@media (max-width: 1028px) {
+    .containerAniversario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textosAniversario {
+        align-items: center;
+    }
+
+    .textosAniversario p {
+        text-align: center;
+    }
+
+    .textosAniversario .botaoTextos {
+        text-wrap: wrap;
+        width: auto;
+    }
+}

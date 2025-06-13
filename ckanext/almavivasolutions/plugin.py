@@ -1,6 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckanext.almavivasolutions.controllers import bp
+from typing import Dict, Callable, Any
 
 # import ckanext.almavivasolutions.cli as cli
 # import ckanext.almavivasolutions.helpers as helpers
@@ -26,6 +27,8 @@ class AlmavivasolutionsPlugin(plugins.SingletonPlugin):
     
 
     # IConfigurer
+
+
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, "templates")
@@ -54,11 +57,18 @@ class AlmavivasolutionsPlugin(plugins.SingletonPlugin):
 
     # ITemplateHelpers
 
-    # def get_helpers(self):
-    #     return helpers.get_helpers()
+    # def get_helpers(self) -> Dict[str, Callable[..., Any]]:
+    #     return {
+    #         'exibir_grupos': exibir_grupos,
+    #     }
 
+
+    # def exibir_grupos():
+    #     groups = toolkit.get_action('group_list')(
+    #         {}, {'all_fields': True}
+    #     )
+    #     return groups[:10]
     # IValidators
 
     # def get_validators(self):
     #     return validators.get_validators()
-    

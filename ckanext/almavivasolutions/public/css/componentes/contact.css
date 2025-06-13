@@ -1,0 +1,151 @@
+.contact {
+    width: 100%;
+    max-width: 75rem;
+    padding: 32px 0;
+    margin: 0 auto;
+}
+
+.containerContact {
+    max-width: 360px;
+    width: 100%;
+    margin-left: 4.5rem;
+    border: 1px solid var(--cor-cinza);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 0 16px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formulario h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 24px;
+}
+
+#questoes {
+    display: flex;
+    flex-direction: column;
+}
+
+#questoes a {
+    background-color: var(--cor-vermelho);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: max-content;
+    margin-bottom: 24px;
+}
+
+#questoes p {
+    margin: 0;
+    color: var(--cor-cinza-escuro);
+}
+
+#questoes label {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#questoes label::after {
+    content: '';
+    text-decoration: none;
+}
+
+#questoes label span {
+    color: var(--cor-vermelho);
+}
+
+
+#questoes input {
+    margin-top: 8px;
+    padding: 8px;
+}
+
+#questoes #comment {
+    margin-top: 8px;
+    padding: 8px;
+    height: 10rem;
+}
+
+
+.linkPrivacidade {
+    font-size: 13px;
+    color: var(--cor-azul);
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.aviso span {
+    color: var(--cor-vermelho);
+}
+
+.privacidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 16px;
+}
+
+.privacidade img {
+    width: 16px;
+    height: 10px;
+}
+
+.privacidade p {
+    margin: auto;
+    margin-right: 2px;
+    font-size: 12px;
+}
+
+.privacidade p a {
+    color: var(--cor-azul);
+    font-size: 12px;
+}
+
+.privacidade p a svg {
+    width: 10px;
+}
+
+.privacidade p span {
+    color: var(--cor-vermelho) !important;
+}
+
+.aviso {
+    font-size: 13px;
+}
+
+@media (max-width: 1028px) {
+    .containerContact {
+        max-width: 400px;
+        margin-left: 16px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .containerContact {
+        max-width: 400px;
+        margin-left: 0;
+    }
+
+    .linkPrivacidade {
+        word-break: break-all;
+    }
+
+    .formulario h1 {
+        word-break: break-all;
+    }
+}

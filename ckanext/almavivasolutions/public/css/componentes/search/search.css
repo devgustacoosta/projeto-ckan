@@ -1,0 +1,9 @@
+.main {
+    padding: 0 0 0 0 !important;
+    background: #f6f6f6;
+    background-image: none;
+}
+
+.wrapper {
+    padding: 0 0 0 -12px;
+}
