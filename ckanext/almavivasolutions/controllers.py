@@ -11,6 +11,10 @@ def dataGovEUA():
 def dadosGO():
     return render_template('organization/data-go.html', page={})
 
+@bp.route('/organization/helsinki-region-infoshare')
+def dadosGB():
+    return render_template('organization/data-gb.html', page={})
+
 
 # @bp.route('/open-government')
 # def openGovernment():

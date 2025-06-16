@@ -1,0 +1,36 @@
+.bannerGB {
+    background-image: url('/imagens/data-gb/hri_frontpage_bgr-1.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.containerGb {}
+
+.linksImg {}
+
+.linksImg nav {}
+
+.linksImg nav ul {}
+
+.linksImg nav ul li {}
+
+.linksImg nav ul li a {}
+
+.linksImg nav ul li img {}
+
+.containerTitulos {}
+
+.containerTitulos h1 {}
+
+.containerTitulos p {}
+
+.inputGroup {}
+
+.containerInfoDados {}
+
+.dadosGrupo {}
+
+.dadosGrupo .numDados {}
+
+.dadosGrupo .textoDados {}
