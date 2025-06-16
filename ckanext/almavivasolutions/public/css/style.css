@@ -1,18 +1,18 @@
 /* @import url('componentes/header.css'); */
-@import url('componentes/banner.css');
+@import url('data-eua/componentes/banner.css');
 /*@import url('componentes/footer.css');
 @import url('componentes/contact.css');
 @import url('componentes/open-government.css');
 @import url('componentes/user-guide.css');
 @import url('componentes/dataset.css'); */
 
-@import url('componentes/identificacao.css');
-@import url('componentes/index/home-index.css');
-@import url('componentes/index/catalogo-index.css');
-@import url('componentes/index/missao-index.css');
-@import url('componentes/index/aniversario-index.css');
-@import url('componentes/index/sites-index.css');
-@import url('componentes/index/graficos-index.css');
+@import url('data-eua/componentes/identificacao.css');
+@import url('data-eua/componentes/index/home-index.css');
+@import url('data-eua/componentes/index/catalogo-index.css');
+@import url('data-eua/componentes/index/missao-index.css');
+@import url('data-eua/componentes/index/aniversario-index.css');
+@import url('data-eua/componentes/index/sites-index.css');
+@import url('data-eua/componentes/index/graficos-index.css');
 
 /* @import url('componentes/search/search.css');
 @import url('componentes/search/mapa.css');
@@ -23,8 +23,12 @@
 
 @import url('componentes/metrics.css'); */
 
-@import url('componentes/index-data-go.css');
+@import url('data-go/index-data-go.css');
 @import url('data-gb/index.css');
+
+@import url('index-ckan.css');
+@import url('teste.css');
+
 
 
 :root {

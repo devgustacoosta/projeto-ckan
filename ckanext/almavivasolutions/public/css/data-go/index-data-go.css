@@ -1,0 +1,306 @@
+.headerGO {
+    background-color: #F5F5F5;
+    padding: 10px;
+    width: 100%;
+}
+
+.headerGO .containerGO {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+.containerGO {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+.headerGO .containerGO img {
+    width: auto;
+    height: auto;
+    max-width: 350px;
+    max-height: 92px;
+}
+
+.menuGO {
+    padding: 0 0 10px 0;
+    color: #fff;
+    background-color: #00B950;
+    border-top: 1px solid #5d726f;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.menuGO nav {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    margin: auto 0 0 auto;
+    padding-bottom: 0;
+}
+
+.menuGO nav ul {
+    display: flex;
+    text-decoration: none;
+    margin: auto 0 0 0;
+}
+
+.menuGO nav ul li {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px 15px;
+
+}
+
+.menuGO nav ul li:hover {
+    background-color: black;
+    border-radius: 5px;
+
+}
+
+.menuGO nav ul li a {
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pesquisaGO {
+    width: 100%;
+    background-image: url('/imagens/data-go/bg_busca.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    min-height: 250px;
+    margin-bottom: 60px;
+}
+
+
+.pesquisaGO .containerPesquisa {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisaGO .containerPesquisa input {
+    width: 100%;
+    padding: 10px 19px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.pesquisaGO .containerPesquisa button {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #00923F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.pesquisaGO .containerPesquisa button img {
+    margin-right: 5px;
+}
+
+.dadosQTDEGO {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 0 15px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.dadosQTDEGO .grupoDados {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 0 15px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dadosQTDEGO .grupoDados .numero {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.dadosQTDEGO .grupoDados .tipoDeDado {
+    display: block;
+    font-size: 1.1em;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.grupoDeDados {
+    width: 100%;
+}
+
+.containerGOGrupoDados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+.grupoDeDados .media-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.grupoDeDados .media-item {
+    width: 100%;
+    max-width: 178px;
+}
+
+.grupoDeDados .media-item .media-image {
+    width: 100%;
+    max-width: 160px;
+}
+
+.grupoDeDados .media-item .media-view {
+    width: 100%;
+}
+
+.containerGOFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    align-items: center;
+}
+
+.containerGOFooter a img {
+    margin: 16px 8px;
+    width: 100%;
+    max-width: 80px;
+}
+
+@media (max-width: 850px) {
+    .grupoDeDados .media-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .grupoDeDados .media-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .headerGO .containerGO img {
+        width: 100%;
+        height: 100%;
+        max-width: 350px;
+        max-height: 92px;
+    }
+
+    .containerGO,
+    .menuGO nav ul {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .menuGO nav {
+        justify-content: center;
+    }
+
+    .menuGO nav ul li {
+        flex: 1;
+        padding: 3px 6px;
+    }
+
+    .menuGO nav ul li a {
+        padding: 3px 6px;
+    }
+
+    .containerPesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisaGO .containerPesquisa button {
+        flex-wrap: wrap;
+    }
+
+    .dadosQTDEGO .grupoDados {
+        flex: 1;
+    }
+
+    .containerGOFooter {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .grupoDeDados .media-item .media-view {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .grupoDeDados .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 250px) {
+    .grupoDeDados .media-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dadosQTDEGO .grupoDados {
+        padding: 2px;
+        margin: 0 2px;
+    }
+
+    .containerGOGrupoDados {
+        padding: 0;
+    }
+}

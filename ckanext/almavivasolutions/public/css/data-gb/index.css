@@ -1,36 +1,79 @@
-.bannerGB {
-    background-image: url('/imagens/data-gb/hri_frontpage_bgr-1.png');
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+.hero {
+    background-image: url('/imagens/data-gb/hri_frontpage_bgr-1.png') !important;
+    background-size: cover !important;
+    background-position: 100% 100% !important;
+    position: relative !important;
 }
 
-.containerGb {}
+.box,
+.wrapper {
+    background-color: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
 
-.linksImg {}
+.hero:after {
+    border-bottom: none;
+}
 
-.linksImg nav {}
+.logos {
+    top: 250px !important;
+}
 
-.linksImg nav ul {}
+.logos img {
+    width: 100% !important;
+    max-width: 200px !important;
+    height: auto;
+}
 
-.linksImg nav ul li {}
+@media (min-width: 768px) {
+    .wrapper:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 25%;
+        z-index: 1;
+        border: none;
+    }
+}
 
-.linksImg nav ul li a {}
+@media (max-width: 500px) {
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.linksImg nav ul li img {}
+    .hero .input-group {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.containerTitulos {}
+    .hero .input-group #q {
+        float: center !important;
+        border-radius: 5px;
+        width: 100% !important;
+    }
 
-.containerTitulos h1 {}
+    .hero .input-group button {
+        width: 100%;
+        border-radius: 5px !important;
+        text-align: center;
+    }
 
-.containerTitulos p {}
+    .hero .input-group button.btn-tertiary .fa {
+        display: none;
+        padding: 0 !important;
+    }
 
-.inputGroup {}
-
-.containerInfoDados {}
-
-.dadosGrupo {}
-
-.dadosGrupo .numDados {}
-
-.dadosGrupo .textoDados {}
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+    .hero .input-group button.btn-tertiary{
+        padding: 0.625rem 2px !important;
+    }
+}
